@@ -25,13 +25,15 @@ void test_trim() {
 void test_split() {
     LOG(INFO) << "<test split>";
     string a = "input_path:xxx output_path:xxx";
-    vector<string> list = split(a);
+    vector<string> list = split(a, " ");
+    for (auto i : list)
+        cout << i << endl;
     CHECK(list.size() == 2);
     LOG(INFO) << "original str is:" << a;
     for (auto p:list) 
         LOG(INFO) << "part\t" << p;
     CHECK(list[0] == "input_path:xxx");
-    CHECK(list[0] == "output_path:xxx");
+    CHECK(list[1] == "output_path:xxx");
 }
 
 
@@ -42,13 +44,13 @@ void test_kv_split() {
     LOG(INFO) << "original str is:" << a;
     LOG(INFO) << "key:" << kv.first << " value:" << kv.second;
     CHECK(kv.first == "input_path");
-    CHECK(kv.second == "output_path");
+    CHECK(kv.second == "/root/input"); 
 }
 
-void test_is_comment() {
+void test_starts_with() {
     LOG(INFO) << "<test is comment>";
     string a = "# this is comment";
-    bool ret = is_comment(a);
+    bool ret = starts_with(a, "#");
     CHECK(ret == true);
     LOG(INFO) << "original str is:" << a;
     LOG(INFO) << "is comment?" << ret;
@@ -58,5 +60,5 @@ int main() {
     test_trim();
     test_split();
     test_kv_split();
-    test_is_comment();
+    test_starts_with();
 }

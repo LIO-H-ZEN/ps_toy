@@ -12,6 +12,6 @@
 #include <iostream>
 
 #include "NoncopyableObject.h"
-#include "glog/glog.h"
+#include "glog/logging.h"
 
 #endif

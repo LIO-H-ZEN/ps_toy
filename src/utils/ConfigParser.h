@@ -1,3 +1,11 @@
+/* ******************************************************
+# Author       : liuzhaocheng
+# Last modified: 2017-04-27 03:20
+# Email        : lio_h_zen@163.com
+# Filename     : ConfigParser.h
+# Description  : 
+******************************************************/
+
 #ifndef LZC_CONFIGPARSER_H
 #define LZC_CONFIGPARSER_H
 
@@ -40,3 +48,4 @@ private:
 }; // class ConfigParser
 
 } // namespace lzc
+#endif
