@@ -10,6 +10,7 @@
 
 #include <unordered_map>
 #include <iostream>
+#include <fstream>
 
 #include "NoncopyableObject.h"
 #include "glog/logging.h"

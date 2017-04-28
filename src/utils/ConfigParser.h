@@ -9,11 +9,14 @@
 #ifndef LZC_CONFIGPARSER_H
 #define LZC_CONFIGPARSER_H
 
+#include "common.h"
+#include "string.h"
+
 namespace lzc {
 
 struct ConfigItem {
     std::string value;
-    ConfigItem(const std::string &val) value(val) {}
+    ConfigItem(const std::string &val): value(val) {}
     int to_int32() const {
         CHECK(!value.empty());
         return std::move(stoi(value));
@@ -33,6 +36,10 @@ struct ConfigItem {
 
 class ConfigParser : public NoncopyableObject {
 public:
+    ConfigParser(const std::string& conf_path): _conf_path(conf_path) {
+        parse(); 
+    }
+
     void register_config(const std::string &key, const std::string &value="") {
         CHECK(!key.empty());
         CHECK(_unmap.count(key) == 0) << "duplicate key value:\t" << key; 
@@ -41,10 +48,36 @@ public:
     const ConfigItem& get_config(const std::string &key) {
         auto p = _unmap.find(key);
         CHECK(p != _unmap.end()) << "key value not found\t" << key;
-        return p.second;
+        return p->second;
     }
+
 private: 
     std::unordered_map<std::string, ConfigItem> _unmap;
+    std::string _conf_path;
+
+    void parse() {
+        LOG(INFO) << "loading from : " << _conf_path;
+        parse_conf(_conf_path);
+    }
+
+    void parse_conf(std::string conf_path) {
+        std::string line;
+        std::ifstream fd(conf_path);
+        CHECK(fd.is_open()) << "failed to open config file, path is:" << _conf_path;        
+        while (getline(fd, line)) {
+            trim(line);
+            if (starts_with(line, "#")) continue;
+            if (starts_with(line, "import")) {
+                std::pair<std::string, std::string> ps = kv_split(line, " ");
+                LOG(INFO) << "start to loading from " << ps.second;
+                parse_conf(ps.second); 
+                LOG(INFO) << "loaded from " << ps.second;
+                continue;
+            }
+            std::pair<std::string, std::string> ps = kv_split(line, ":");
+            register_config(ps.first, ps.second);
+        }
+    }
 }; // class ConfigParser
 
 } // namespace lzc

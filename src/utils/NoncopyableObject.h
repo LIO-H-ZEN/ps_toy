@@ -10,6 +10,7 @@
 
 namespace lzc {
 class NoncopyableObject {
+public:
     NoncopyableObject() = default;
     NoncopyableObject(const NoncopyableObject&) = delete;
     NoncopyableObject& operator=(const NoncopyableObject&) = delete;
