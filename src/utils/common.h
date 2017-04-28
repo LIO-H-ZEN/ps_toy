@@ -15,4 +15,9 @@
 #include "NoncopyableObject.h"
 #include "glog/logging.h"
 
+typedef int int32;
+typedef long int64;
+typedef unsigned int uint32;
+typedef unsigned long uint64;
+
 #endif

@@ -13,7 +13,7 @@
 
 namespace lzc {
 
-inline std::uint64_t get_hash_code(std::uint64_t x) {
+inline uint64 get_hash_code(uint64 x) {
    // copy from MurmurHash3
    x ^= x >> 33;
    x *= 0xff51afd7ed558ccd;
