@@ -12,7 +12,8 @@ THIRD_LIB=../../third/local/glog/lib/libglog.a
 
 all: $(BIN)/utils_string.out \
 	 $(BIN)/utils_configparser.out \
-	 $(BIN)/utils_hashfunction.out
+	 $(BIN)/utils_hashfunction.out \
+	 $(BIN)/utils_buffer.out
 
 $(BIN)/utils_string.out : utils/string.cpp ../utils/string.h
 	$(CXX) utils/string.cpp $(CXXFLAGS) $(THIRD_INCPATH) -Xlinker $(THIRD_LIB) -o $(BIN)/utils_string.out 
@@ -22,3 +23,6 @@ $(BIN)/utils_configparser.out : utils/configparser.cpp ../utils/ConfigParser.h
 
 $(BIN)/utils_hashfunction.out : utils/hashfunction.cpp ../utils/HashFunction.h
 	$(CXX) utils/hashfunction.cpp $(CXXFLAGS) $(THIRD_INCPATH) -Xlinker $(THIRD_LIB) -o $(BIN)/utils_hashfunction.out 
+
+$(BIN)/utils_buffer.out : utils/buffer.cpp ../utils/Buffer.h
+	$(CXX) utils/buffer.cpp $(CXXFLAGS) $(THIRD_INCPATH) -Xlinker $(THIRD_LIB) -o $(BIN)/utils_buffer.out -Wno-reorder

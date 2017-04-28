@@ -16,10 +16,13 @@
 #include "NoncopyableObject.h"
 #include "glog/logging.h"
 
-typedef int int32;
-typedef long int64;
-typedef unsigned int uint32;
-typedef unsigned long uint64;
+typedef short int16_t;
+typedef int int32_t;
+typedef long int64_t;
+typedef unsigned short uint16_t;
+typedef unsigned int uint32_t;
+typedef unsigned long uint64_t;
+typedef unsigned char byte_t;
 
 #define REPEAT_MACRO1(X) REPEAT_PATTERN(X)
 #define REPEAT_MACRO2(X, args...) REPEAT_PATTERN(X) REPEAT_MACRO1(args)
