@@ -44,6 +44,15 @@ bool starts_with(std::string &ss, const std::string &flag) {
     return ss.substr(0, lens) == flag;
 }
 
+template <typename... ARGS>
+void format_string(std::string& ret, const char* format, ARGS... args) {
+    int len = std::snprintf(nullptr, 0, format, args...);
+    CHECK(len > 0);
+    int pre_len = ret.size();
+    ret.resize(pre_len + len + 1); 
+    CHECK(std::snprintf(&ret[pre_len], len + 1, format, args...) == len);
+}
+
 } // namespace lzc
 
 #endif

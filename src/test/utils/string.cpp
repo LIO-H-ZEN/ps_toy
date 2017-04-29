@@ -56,9 +56,20 @@ void test_starts_with() {
     LOG(INFO) << "is comment?" << ret;
 }
 
+void test_format_string() {
+    LOG(INFO) << "<test format string>";
+    string ret = "1234";
+    cout << ret << endl;
+    format_string(ret, "56%s10", "789");
+    cout << ret << endl;
+    CHECK(ret.substr(0, 11) == "12345678910");
+    LOG(INFO) << "test format string done";
+}
+
 int main() {
     test_trim();
     test_split();
     test_kv_split();
     test_starts_with();
+    test_format_string();
 }
