@@ -19,11 +19,16 @@ public:
         _buffer = new char[capacity()];
         _writer = _reader = _buffer;
     }
+    // Move constructor.
     explicit BasicBuffer(BasicBuffer&& other) :
     _capacity(other._capacity), _buffer(other._buffer), _reader(other._buffer), _writer(other._writer) {
         other.clear(); // 置空，礼貌性的行为 // other使用std::move()
     }
-    
+
+    ~BasicBuffer() {
+        free_ori();
+    }    
+
     size_t capacity() {
         return _capacity;
     }
@@ -61,17 +66,16 @@ public:
     }
 
     void clear() {
-        _capacity = 0;
         _buffer = nullptr;
         _writer = nullptr;
+        _reader = nullptr;
+        _capacity = 0;
     }
 
     void free_ori() {
         if (_buffer) {
             delete _buffer;
-            _buffer = nullptr;
-            _writer = nullptr;
-            _capacity = 0;
+            clear();
         } 
     }
 

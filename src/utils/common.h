@@ -12,6 +12,11 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <mutex>
+#include <condition_variable>
+#include <memory>
+#include <queue>
+#include <thread>
 
 #include "NoncopyableObject.h"
 #include "glog/logging.h"
