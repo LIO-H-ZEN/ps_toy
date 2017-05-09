@@ -92,6 +92,14 @@ public:
         _writer = _buffer + pre_size + 1; // 这点是不是要加1，还存疑。
         _capacity = lens; 
     }
+
+    void set(char* buf, size_t size) {
+        CHECK(size > 0);
+        _buffer = new char[size];
+        memcpy(_buffer, buf, size);
+        _reader = _buffer;
+        _writer = _buffer + size + 1; 
+    }
 private:
     size_t _capacity = 1024;
     char* _buffer = nullptr; 

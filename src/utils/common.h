@@ -20,6 +20,7 @@
 
 #include "NoncopyableObject.h"
 #include "glog/logging.h"
+#include "zmq.h"
 
 typedef short int16_t;
 typedef int int32_t;

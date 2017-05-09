@@ -1,288 +1,295 @@
-libzmq_la-dist.lo: dist.cpp dist.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/algorithm \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/initializer_list \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstddef \
-  /Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/type_traits \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstring \
-  /usr/include/string.h /usr/include/_types.h /usr/include/sys/_types.h \
-  /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
-  /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
-  /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
-  /usr/include/Availability.h /usr/include/AvailabilityInternal.h \
-  /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_null.h \
-  /usr/include/sys/_types/_rsize_t.h /usr/include/sys/_types/_errno_t.h \
-  /usr/include/sys/_types/_ssize_t.h /usr/include/strings.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/utility \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tuple \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tuple_03 \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/memory \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/typeinfo \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/exception \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstdint \
-  /Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/stdint.h \
-  /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
-  /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
-  /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
-  /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
-  /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
-  /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
-  /usr/include/_types/_uintmax_t.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/new \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__undef_min_max \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iterator \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iosfwd \
-  /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h \
-  /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
-  /usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/stdarg.h \
-  /usr/include/stdio.h /usr/include/sys/_types/_va_list.h \
-  /usr/include/sys/stdio.h /usr/include/sys/_types/_off_t.h \
-  /usr/include/time.h /usr/include/sys/_types/_clock_t.h \
-  /usr/include/sys/_types/_time_t.h /usr/include/sys/_types/_timespec.h \
-  /usr/include/_wctype.h /usr/include/sys/_types/_wint_t.h \
-  /usr/include/_types/_wctype_t.h /usr/include/ctype.h \
-  /usr/include/runetype.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional_base \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional_base_03 \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/tuple \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
-  /Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/limits.h \
-  /usr/include/limits.h /usr/include/machine/limits.h \
-  /usr/include/i386/limits.h /usr/include/i386/_limits.h \
-  /usr/include/sys/syslimits.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdexcept \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
-  array.hpp pipe.hpp msg.hpp config.hpp atomic_counter.hpp stdint.hpp \
-  platform.hpp ypipe_base.hpp object.hpp blob.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstdio \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwchar \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwctype \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cctype \
-  /usr/include/wctype.h /usr/include/_types/_wctrans_t.h err.hpp \
-  ../include/zmq.h /usr/include/errno.h /usr/include/sys/errno.h \
-  /usr/include/assert.h /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
-  /usr/include/machine/signal.h /usr/include/i386/signal.h \
-  /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
-  /usr/include/mach/i386/_structs.h \
-  /usr/include/sys/_pthread/_pthread_attr_t.h \
-  /usr/include/sys/_types/_sigaltstack.h \
-  /usr/include/sys/_types/_ucontext.h \
-  /usr/include/sys/_types/_sigset_t.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
-  /usr/include/machine/endian.h /usr/include/i386/endian.h \
-  /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
-  /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
-  /usr/include/machine/types.h /usr/include/i386/types.h \
-  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
-  likely.hpp /usr/include/netdb.h /usr/include/sys/_types/_socklen_t.h \
-  /usr/include/netinet/in.h /usr/include/sys/_types/_in_addr_t.h \
-  /usr/include/sys/_types/_in_port_t.h /usr/include/sys/socket.h \
-  /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
-  /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
-  /usr/include/sys/_types/_ino_t.h /usr/include/sys/_types/_ino64_t.h \
-  /usr/include/sys/_types/_key_t.h /usr/include/sys/_types/_nlink_t.h \
-  /usr/include/sys/_types/_useconds_t.h \
-  /usr/include/sys/_types/_suseconds_t.h \
-  /usr/include/sys/_types/_fd_def.h \
-  /usr/include/sys/_types/_fd_setsize.h \
-  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
-  /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_isset.h \
-  /usr/include/sys/_types/_fd_copy.h \
-  /usr/include/sys/_pthread/_pthread_cond_t.h \
-  /usr/include/sys/_pthread/_pthread_condattr_t.h \
-  /usr/include/sys/_pthread/_pthread_mutex_t.h \
-  /usr/include/sys/_pthread/_pthread_mutexattr_t.h \
-  /usr/include/sys/_pthread/_pthread_once_t.h \
-  /usr/include/sys/_pthread/_pthread_rwlock_t.h \
-  /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
-  /usr/include/sys/_pthread/_pthread_t.h \
-  /usr/include/sys/_pthread/_pthread_key_t.h \
-  /usr/include/sys/_types/_fsblkcnt_t.h \
-  /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/machine/_param.h \
-  /usr/include/i386/_param.h /usr/include/sys/_types/_sa_family_t.h \
-  /usr/include/sys/_types/_iovec_t.h /usr/include/netinet6/in6.h
+libzmq_la-dist.lo: dist.cpp /usr/include/stdc-predef.h dist.hpp \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/vector \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/functexcept.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/exception_defines.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/cpp_type_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/ext/type_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/ext/numeric_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/move.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/concept_check.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/type_traits \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_iterator_base_types.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_iterator_base_funcs.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/debug/assertions.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_iterator.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/ptr_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/debug/debug.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/allocator.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/ext/new_allocator.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/new \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/exception \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/atomic_lockfree_defines.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/exception_ptr.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/memoryfwd.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_construct.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/ext/alloc_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/alloc_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_uninitialized.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_vector.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/initializer_list \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/functional_hash.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/hash_bytes.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/range_access.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/vector.tcc array.hpp \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/algorithm \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/utility \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_relops.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/cstdlib /usr/include/stdlib.h \
+ /usr/local/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/algorithmfwd.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_tempbuf.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/uniform_int_dist.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/limits pipe.hpp msg.hpp \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/local/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h config.hpp atomic_counter.hpp stdint.hpp \
+ platform.hpp \
+ /usr/local/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h ypipe_base.hpp \
+ object.hpp blob.hpp /usr/local/gcc-6.2.0/include/c++/6.2.0/string \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stringfwd.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/postypes.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/cwchar \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/cstdint \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/localefwd.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/local/gcc-6.2.0/include/c++/6.2.0/iosfwd \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/cctype /usr/include/ctype.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/ostream_insert.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/cxxabi_forced.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_function.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/backward/binders.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/basic_string.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/ext/atomicity.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/gthr.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/timex.h /usr/include/bits/setjmp.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/ext/string_conversions.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/cstdio \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/cerrno /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/bits/basic_string.tcc \
+ /usr/include/string.h err.hpp ../include/zmq.h /usr/include/assert.h \
+ /usr/local/gcc-6.2.0/include/c++/6.2.0/stdlib.h likely.hpp \
+ /usr/include/netdb.h /usr/include/netinet/in.h /usr/include/sys/socket.h \
+ /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/rpc/netdb.h /usr/include/bits/siginfo.h \
+ /usr/include/bits/netdb.h
+
+/usr/include/stdc-predef.h:
 
 dist.hpp:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/vector:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/algorithm:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/initializer_list:
-
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstddef:
-
-/Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/stddef.h:
-
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/type_traits:
-
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstring:
-
-/usr/include/string.h:
-
-/usr/include/_types.h:
-
-/usr/include/sys/_types.h:
+/usr/include/features.h:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/sys/_symbol_aliasing.h:
+/usr/include/bits/wordsize.h:
 
-/usr/include/sys/_posix_availability.h:
+/usr/include/gnu/stubs.h:
 
-/usr/include/machine/_types.h:
+/usr/include/gnu/stubs-64.h:
 
-/usr/include/i386/_types.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
-/usr/include/sys/_pthread/_pthread_types.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/functexcept.h:
 
-/usr/include/Availability.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/exception_defines.h:
 
-/usr/include/AvailabilityInternal.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/cpp_type_traits.h:
 
-/usr/include/sys/_types/_size_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/ext/type_traits.h:
 
-/usr/include/sys/_types/_null.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/ext/numeric_traits.h:
 
-/usr/include/sys/_types/_rsize_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:
 
-/usr/include/sys/_types/_errno_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/move.h:
 
-/usr/include/sys/_types/_ssize_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/concept_check.h:
 
-/usr/include/strings.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/type_traits:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/utility:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_iterator_base_types.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tuple:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_iterator_base_funcs.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tuple_03:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/debug/assertions.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/memory:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_iterator.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/typeinfo:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/ptr_traits.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/exception:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/debug/debug.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstdint:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/stdint.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/allocator.h:
 
-/usr/include/stdint.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
-/usr/include/sys/_types/_int8_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/ext/new_allocator.h:
 
-/usr/include/sys/_types/_int16_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/new:
 
-/usr/include/sys/_types/_int32_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/exception:
 
-/usr/include/sys/_types/_int64_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/atomic_lockfree_defines.h:
 
-/usr/include/_types/_uint8_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/exception_ptr.h:
 
-/usr/include/_types/_uint16_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:
 
-/usr/include/_types/_uint32_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/memoryfwd.h:
 
-/usr/include/_types/_uint64_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_construct.h:
 
-/usr/include/sys/_types/_intptr_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/ext/alloc_traits.h:
 
-/usr/include/sys/_types/_uintptr_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/alloc_traits.h:
 
-/usr/include/_types/_intmax_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_uninitialized.h:
 
-/usr/include/_types/_uintmax_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_vector.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/new:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/initializer_list:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__undef_min_max:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/functional_hash.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iterator:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/hash_bytes.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iosfwd:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/range_access.h:
 
-/usr/include/wchar.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/vector.tcc:
 
-/usr/include/sys/_types/_mbstate_t.h:
+array.hpp:
 
-/usr/include/sys/_types/_ct_rune_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/algorithm:
 
-/usr/include/sys/_types/_rune_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/utility:
 
-/usr/include/sys/_types/_wchar_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_relops.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/stdarg.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:
 
-/usr/include/stdio.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/cstdlib:
 
-/usr/include/sys/_types/_va_list.h:
+/usr/include/stdlib.h:
 
-/usr/include/sys/stdio.h:
+/usr/local/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/include/stddef.h:
 
-/usr/include/sys/_types/_off_t.h:
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/byteswap-16.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/sys/types.h:
 
 /usr/include/time.h:
 
-/usr/include/sys/_types/_clock_t.h:
+/usr/include/sys/select.h:
 
-/usr/include/sys/_types/_time_t.h:
+/usr/include/bits/select.h:
 
-/usr/include/sys/_types/_timespec.h:
+/usr/include/bits/sigset.h:
 
-/usr/include/_wctype.h:
+/usr/include/bits/time.h:
 
-/usr/include/sys/_types/_wint_t.h:
+/usr/include/sys/sysmacros.h:
 
-/usr/include/_types/_wctype_t.h:
+/usr/include/bits/pthreadtypes.h:
 
-/usr/include/ctype.h:
+/usr/include/alloca.h:
 
-/usr/include/runetype.h:
+/usr/include/bits/stdlib-float.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional_base:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/algorithmfwd.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional_base_03:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/tuple:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_tempbuf.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/uniform_int_dist.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../lib/clang/6.0/include/limits.h:
-
-/usr/include/limits.h:
-
-/usr/include/machine/limits.h:
-
-/usr/include/i386/limits.h:
-
-/usr/include/i386/_limits.h:
-
-/usr/include/sys/syslimits.h:
-
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdexcept:
-
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer:
-
-array.hpp:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/limits:
 
 pipe.hpp:
 
 msg.hpp:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/local/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
 
 config.hpp:
 
@@ -292,168 +299,134 @@ stdint.hpp:
 
 platform.hpp:
 
+/usr/local/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
 ypipe_base.hpp:
 
 object.hpp:
 
 blob.hpp:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/string:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstdio:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stringfwd.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwchar:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwctype:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/postypes.h:
 
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cctype:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/cwchar:
 
-/usr/include/wctype.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/cstdint:
 
-/usr/include/_types/_wctrans_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/localefwd.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/bits/locale.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/iosfwd:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/cctype:
+
+/usr/include/ctype.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/ostream_insert.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/cxxabi_forced.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/stl_function.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/backward/binders.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/basic_string.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/ext/atomicity.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/bits/timex.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/ext/string_conversions.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/cstdio:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/cerrno:
+
+/usr/include/errno.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/local/gcc-6.2.0/include/c++/6.2.0/bits/basic_string.tcc:
+
+/usr/include/string.h:
 
 err.hpp:
 
 ../include/zmq.h:
 
-/usr/include/errno.h:
-
-/usr/include/sys/errno.h:
-
 /usr/include/assert.h:
 
-/usr/include/stdlib.h:
-
-/usr/include/sys/wait.h:
-
-/usr/include/sys/_types/_pid_t.h:
-
-/usr/include/sys/_types/_id_t.h:
-
-/usr/include/sys/signal.h:
-
-/usr/include/sys/appleapiopts.h:
-
-/usr/include/machine/signal.h:
-
-/usr/include/i386/signal.h:
-
-/usr/include/machine/_mcontext.h:
-
-/usr/include/i386/_mcontext.h:
-
-/usr/include/mach/i386/_structs.h:
-
-/usr/include/sys/_pthread/_pthread_attr_t.h:
-
-/usr/include/sys/_types/_sigaltstack.h:
-
-/usr/include/sys/_types/_ucontext.h:
-
-/usr/include/sys/_types/_sigset_t.h:
-
-/usr/include/sys/_types/_uid_t.h:
-
-/usr/include/sys/resource.h:
-
-/usr/include/sys/_types/_timeval.h:
-
-/usr/include/machine/endian.h:
-
-/usr/include/i386/endian.h:
-
-/usr/include/sys/_endian.h:
-
-/usr/include/libkern/_OSByteOrder.h:
-
-/usr/include/libkern/i386/_OSByteOrder.h:
-
-/usr/include/alloca.h:
-
-/usr/include/machine/types.h:
-
-/usr/include/i386/types.h:
-
-/usr/include/sys/_types/_dev_t.h:
-
-/usr/include/sys/_types/_mode_t.h:
+/usr/local/gcc-6.2.0/include/c++/6.2.0/stdlib.h:
 
 likely.hpp:
 
 /usr/include/netdb.h:
 
-/usr/include/sys/_types/_socklen_t.h:
-
 /usr/include/netinet/in.h:
-
-/usr/include/sys/_types/_in_addr_t.h:
-
-/usr/include/sys/_types/_in_port_t.h:
 
 /usr/include/sys/socket.h:
 
-/usr/include/sys/types.h:
+/usr/include/sys/uio.h:
 
-/usr/include/sys/_types/_blkcnt_t.h:
+/usr/include/bits/uio.h:
 
-/usr/include/sys/_types/_blksize_t.h:
+/usr/include/bits/socket.h:
 
-/usr/include/sys/_types/_gid_t.h:
+/usr/include/bits/socket_type.h:
 
-/usr/include/sys/_types/_ino_t.h:
+/usr/include/bits/sockaddr.h:
 
-/usr/include/sys/_types/_ino64_t.h:
+/usr/include/asm/socket.h:
 
-/usr/include/sys/_types/_key_t.h:
+/usr/include/asm-generic/socket.h:
 
-/usr/include/sys/_types/_nlink_t.h:
+/usr/include/asm/sockios.h:
 
-/usr/include/sys/_types/_useconds_t.h:
+/usr/include/asm-generic/sockios.h:
 
-/usr/include/sys/_types/_suseconds_t.h:
+/usr/include/bits/in.h:
 
-/usr/include/sys/_types/_fd_def.h:
+/usr/include/rpc/netdb.h:
 
-/usr/include/sys/_types/_fd_setsize.h:
+/usr/include/bits/siginfo.h:
 
-/usr/include/sys/_types/_fd_set.h:
-
-/usr/include/sys/_types/_fd_clr.h:
-
-/usr/include/sys/_types/_fd_zero.h:
-
-/usr/include/sys/_types/_fd_isset.h:
-
-/usr/include/sys/_types/_fd_copy.h:
-
-/usr/include/sys/_pthread/_pthread_cond_t.h:
-
-/usr/include/sys/_pthread/_pthread_condattr_t.h:
-
-/usr/include/sys/_pthread/_pthread_mutex_t.h:
-
-/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
-
-/usr/include/sys/_pthread/_pthread_once_t.h:
-
-/usr/include/sys/_pthread/_pthread_rwlock_t.h:
-
-/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
-
-/usr/include/sys/_pthread/_pthread_t.h:
-
-/usr/include/sys/_pthread/_pthread_key_t.h:
-
-/usr/include/sys/_types/_fsblkcnt_t.h:
-
-/usr/include/sys/_types/_fsfilcnt_t.h:
-
-/usr/include/machine/_param.h:
-
-/usr/include/i386/_param.h:
-
-/usr/include/sys/_types/_sa_family_t.h:
-
-/usr/include/sys/_types/_iovec_t.h:
-
-/usr/include/netinet6/in6.h:
+/usr/include/bits/netdb.h:

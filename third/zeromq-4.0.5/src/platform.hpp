@@ -8,7 +8,7 @@
 #define HAVE_ARPA_INET_H 1
 
 /* Define to 1 if you have the `clock_gettime' function. */
-/* #undef HAVE_CLOCK_GETTIME */
+#define HAVE_CLOCK_GETTIME 1
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #define HAVE_DLFCN_H 1
@@ -50,7 +50,7 @@
 /* #undef HAVE_LIBRPCRT4 */
 
 /* Define to 1 if you have the `rt' library (-lrt). */
-/* #undef HAVE_LIBRT */
+#define HAVE_LIBRT 1
 
 /* Define to 1 if you have the `socket' library (-lsocket). */
 /* #undef HAVE_LIBSOCKET */
@@ -83,7 +83,7 @@
 #define HAVE_SOCKET 1
 
 /* Define to 1 if stdbool.h conforms to C99. */
-#define HAVE_STDBOOL_H 1
+/* #undef HAVE_STDBOOL_H */
 
 /* Define to 1 if you have the <stddef.h> header file. */
 #define HAVE_STDDEF_H 1
@@ -101,7 +101,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the <sys/eventfd.h> header file. */
-/* #undef HAVE_SYS_EVENTFD_H */
+#define HAVE_SYS_EVENTFD_H 1
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
 #define HAVE_SYS_SOCKET_H 1
@@ -183,7 +183,7 @@
 /* #undef ZMQ_HAVE_CYGWIN */
 
 /* Have eventfd extension. */
-/* #undef ZMQ_HAVE_EVENTFD */
+#define ZMQ_HAVE_EVENTFD 1
 
 /* Have FreeBSD OS */
 /* #undef ZMQ_HAVE_FREEBSD */
@@ -195,7 +195,7 @@
 #define ZMQ_HAVE_IFADDRS 1
 
 /* Have Linux OS */
-/* #undef ZMQ_HAVE_LINUX */
+#define ZMQ_HAVE_LINUX 1
 
 /* Have MinGW32 */
 /* #undef ZMQ_HAVE_MINGW32 */
@@ -210,13 +210,13 @@
 /* #undef ZMQ_HAVE_OPENPGM */
 
 /* Have DarwinOSX OS */
-#define ZMQ_HAVE_OSX 1
+/* #undef ZMQ_HAVE_OSX */
 
 /* Have QNX Neutrino OS */
 /* #undef ZMQ_HAVE_QNXNTO */
 
 /* Whether SOCK_CLOEXEC is defined and functioning. */
-/* #undef ZMQ_HAVE_SOCK_CLOEXEC */
+#define ZMQ_HAVE_SOCK_CLOEXEC 1
 
 /* Have Solaris OS */
 /* #undef ZMQ_HAVE_SOLARIS */
@@ -225,13 +225,13 @@
 #define ZMQ_HAVE_SO_KEEPALIVE 1
 
 /* Whether TCP_KEEPALIVE is supported. */
-#define ZMQ_HAVE_TCP_KEEPALIVE 1
+/* #undef ZMQ_HAVE_TCP_KEEPALIVE */
 
 /* Whether TCP_KEEPCNT is supported. */
 #define ZMQ_HAVE_TCP_KEEPCNT 1
 
 /* Whether TCP_KEEPIDLE is supported. */
-/* #undef ZMQ_HAVE_TCP_KEEPIDLE */
+#define ZMQ_HAVE_TCP_KEEPIDLE 1
 
 /* Whether TCP_KEEPINTVL is supported. */
 #define ZMQ_HAVE_TCP_KEEPINTVL 1
